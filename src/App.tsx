@@ -26,19 +26,6 @@ function App() {
           return;
         }
 
-        if (res.account.getSessionStatus() !== "VALID") {
-          // Session has expired or scope (allowed methods) has changed
-          // A new connection request should be triggered
-
-          // The account object is still available to get access to user's address
-          // but transactions can't be executed
-          const { account } = res;
-
-          setAccount(account);
-          setIsConnected(false);
-          return;
-        }
-
         // Connected
         const { account, callbackData } = res;
         // The session account is returned and can be used to submit transactions
@@ -74,7 +61,8 @@ function App() {
         {isConnected && (
           <>
             <p>
-              Account address: <code>{account?.address}</code>
+              Account address:{" "}
+              <code>{account != null ? account?.address : null}</code>
             </p>
             <button onClick={handleClearSessionButton}>Clear Session</button>
           </>
