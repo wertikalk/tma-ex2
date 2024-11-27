@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { ArgentTMA, SessionAccountInterface } from "@argent/tma-wallet";
 
 const argentTMA = ArgentTMA.init({
-  environment: "mainnet", // "sepolia" | "mainnet" (not supperted yet)
+  environment: "sepolia", // "sepolia" | "mainnet" (not supperted yet)
   appName: "Bik Temp.", // Your Telegram app name
   appTelegramUrl: "https://wertikalk.github.io/tma-ex2", // Your Telegram app URL
   sessionParams: {
