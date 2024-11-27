@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { ArgentTMA, SessionAccountInterface } from "@argent/tma-wallet";
-import { Account } from "starknet";
 
 const argentTMA = ArgentTMA.init({
   environment: "mainnet", // "sepolia" | "mainnet" (not supperted yet)
