@@ -1,7 +1,5 @@
 import { useState } from "react";
 import { connect } from "starknetkit";
-import { WebWalletConnector } from "starknetkit/webwallet";
-import { InjectedConnector } from "starknetkit/injected";
 
 import "./App.css";
 
@@ -17,6 +15,7 @@ function App() {
   };
   return (
     <>
+      Address: {address}
       <button onClick={async () => connectWallet()}>Connect Wallet</button>
     </>
   );
